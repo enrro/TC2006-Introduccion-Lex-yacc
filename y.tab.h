@@ -45,40 +45,59 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    NUMBER = 258,
-    PLUS = 259,
-    MINUS = 260,
-    TIMES = 261,
-    DIVIDE = 262,
-    POWER = 263,
-    LEFT_PARENTHESIS = 264,
-    RIGHT_PARENTHESIS = 265,
-    END = 266,
-    NEG = 267
+    NL = 258,
+    BYE = 259,
+    CADENA = 260,
+    ENTERO = 261,
+    SEQ = 262,
+    SNE = 263,
+    SG = 264,
+    SL = 265,
+    SGE = 266,
+    SLE = 267,
+    OR = 268,
+    AND = 269,
+    EQ = 270,
+    NE = 271,
+    GEQ = 272,
+    LEQ = 273,
+    SNOT = 274,
+    SMENOS = 275,
+    SNNOT = 276
   };
 #endif
 /* Tokens.  */
-#define NUMBER 258
-#define PLUS 259
-#define MINUS 260
-#define TIMES 261
-#define DIVIDE 262
-#define POWER 263
-#define LEFT_PARENTHESIS 264
-#define RIGHT_PARENTHESIS 265
-#define END 266
-#define NEG 267
+#define NL 258
+#define BYE 259
+#define CADENA 260
+#define ENTERO 261
+#define SEQ 262
+#define SNE 263
+#define SG 264
+#define SL 265
+#define SGE 266
+#define SLE 267
+#define OR 268
+#define AND 269
+#define EQ 270
+#define NE 271
+#define GEQ 272
+#define LEQ 273
+#define SNOT 274
+#define SMENOS 275
+#define SNNOT 276
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 
 union YYSTYPE
 {
-#line 5 "ejem1.1.y" /* yacc.c:1909  */
+#line 4 "ejem2.y" /* yacc.c:1909  */
 
-        double dval;
+	char *cadena;
+	int entero;
 
-#line 82 "y.tab.h" /* yacc.c:1909  */
+#line 101 "y.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;
